@@ -163,3 +163,135 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+li.pokemon {
+    cursor: pointer;
+}
+
+#modalDetailContainer {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-content {
+    z-index: 11;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    min-width: 400px;
+    max-width: 550px;
+    padding: 1em;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.detail-content .close-button {
+    position: absolute;
+    background-color: #e0e0e0;
+    color: #000;
+    border-radius: 50%;
+    top: 1em;
+    right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.75em;
+    width: 1.75em;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    border: thin solid black;
+}
+
+.detail-content .close-button span {
+    transform: rotate(45deg);
+    font-size: 1.5em;
+}
+
+.detail-content .close-button:hover {
+    background-color: #d0d0d0;
+}
+
+.detail-content .pokemon {
+    width: 100%;
+}
+
+.detail-content .name-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.detail-content .pokemon-name {
+    color: white;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    align-self: center;
+}
+
+.detail-content .pokemon-photo {
+    margin-left: 1em;
+    height: 100px;
+    width: auto;
+}
+
+.detail-content .detail-info {
+    margin-top: 0.75em;
+    font-size: 1em;
+    font-weight: 300;
+    color: #f0f0f0;
+}
+
+.detail-content .detail-name {
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+}
+
+.detail-content .detail-info ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.detail-content .detail-info .side-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.detail-content .detail-info .side-info > :not(:first-child) {
+    margin-left: 0.75em;
+}
+
+.detail-content .detail-info .side-info .types {
+    display: flex;
+    flex-direction: row;
+}
+
+.detail-content .detail-info .side-info .types > :not(:first-child) {
+    margin-left: 0.75em;
+}
+
+.detail-content .detail-info ul.list-stat {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.detail-content .detail-info ul.list-stat li {
+    font-size: 0.85em;
+}
+
+.detail-content .detail-info ul.list-stat .stat-name {
+    font-weight: bold;
+    text-transform: uppercase;
+}
